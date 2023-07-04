@@ -12,13 +12,40 @@
         <img src="./icons/magnify (copy 1).svg" alt="">
     </div>
     <div id="weatherMainInfo">
-        <div>
+        <div class="weatherInfoLeft">
             <p class="cityState">Austin, Texas</p>
             <p id="cityTemperature">90&deg;F</p>
         </div>
-        <div>
+        <div class="weatherInfoRight">
             <p class="weatherStatus">Test</p>
             <img src="./icons/sunny-1.svg" alt="">
+        </div>
+        <div class="weatherInfoMisc">
+            <div class="weatherDetails">
+                <p class="title">Humidity</p>
+                <p class="humidity weatherDetVal">1</p>
+            </div>
+            <div class="weatherDetails">
+                <p class="title">Wind Dir</p>
+                <p class="windDir weatherDetVal">5</p>
+            </div>
+            <div class="weatherDetails">
+                <p class="title">Visibility</p>
+                <p class="visibility weatherDetVal">2</p>
+            </div>
+            <div class="weatherDetails">
+                <p class="title">Wind (MPH)</p>
+                <p class="windMPH weatherDetVal">4</p>
+            </div>
+            <div class="weatherDetails">
+                <p class="title">UV</p>
+                <p class="uv weatherDetVal">3</p>
+            </div>
+
+            <div class="weatherDetails">
+                <p class="title">Precipitation</p>
+                <p class="precip weatherDetVal">6</p>
+            </div>
         </div>
     </div>
     <button id="searchBtn" onclick="searchCity()">Test</button>
