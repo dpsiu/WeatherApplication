@@ -2,6 +2,8 @@
     --clr-white: rgb(233, 233, 233);
     --clr-grey: rgb(231, 231, 231);
     --clr-black: rgb(49, 49, 49);
+    --clr-box-shadow: rgba(0, 0, 0, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
 }
 
@@ -36,4 +38,40 @@ body{
 
 .searchBar input:focus-visible{
     border: none;
+}
+
+/* ---------Main Weather Information---------- */
+
+/* weatherMainInfo > cityState, cityTemperature + weatherStatus, img */
+
+#weatherMainInfo{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0px 4px 20px 0 var(--clr-box-shadow);
+    border-radius: 20px;
+    max-width: 850px;
+    min-width: 400px;
+}
+
+#weatherMainInfo div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cityState,
+.weatherStatus {
+    font-weight: bold;
+}
+
+#cityTemperature{
+    font-size: 200%;
+}
+
+#weatherMainInfo div img{
+    height: 10rem;
 }

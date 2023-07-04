@@ -7,9 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" placeholder="Search for a city" id="cityInput">
+    <div class="searchBar">
+        <input type="text" placeholder="Search for a city" id="cityInput">
+        <img src="./icons/magnify (copy 1).svg" alt="">
+    </div>
+    <div id="weatherMainInfo">
+        <div>
+            <p class="cityState">Austin, Texas</p>
+            <p id="cityTemperature">90&deg;F</p>
+        </div>
+        <div>
+            <p class="weatherStatus">Test</p>
+            <img src="./icons/sunny-1.svg" alt="">
+        </div>
+    </div>
     <button id="searchBtn" onclick="searchCity()">Test</button>
-    <p id="cityTemperature"></p>
+    <!-- <p id="cityTemperature"></p> -->
 
     <script src="script.js"></script>
 </body>
