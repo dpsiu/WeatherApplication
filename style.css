@@ -1,0 +1,39 @@
+:root {
+    --clr-white: rgb(233, 233, 233);
+    --clr-grey: rgb(231, 231, 231);
+    --clr-black: rgb(49, 49, 49);
+    font-size: 18px;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--clr-background);
+}
+
+.searchBar {
+    height: 2rem;
+    display: flex;
+    margin: 2rem;
+}
+
+.searchBar img{
+    background-color: var(--clr-grey);
+    padding: 0px 15px 0px 15px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.searchBar input{
+    border: none;
+    background-color: var(--clr-grey);
+    padding: 1rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 1rem;
+    width: 20rem;
+}
+
+.searchBar input:focus-visible{
+    border: none;
+}
