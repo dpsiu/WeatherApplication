@@ -2,6 +2,7 @@ let city = "Austin"
 let apiKey = "http://api.weatherapi.com/v1/current.json?key=098e7d365540490a963185024232706&q=" + city + "&aqi=no"
 
 const searchBtn = document.getElementById('searchBtn')
+const searchInput = document.getElementById('searchInput')
 const cityTemp = document.getElementById('cityTemperature')
 const cityState = document.getElementById('cityState')
 const weatherStat = document.getElementById('weatherStatus')
@@ -17,10 +18,10 @@ let degreeSymbol = '\u00B0'
 renderData()
 
 async function renderData() {
-
     const response = await fetch(apiKey)
     const jsonData = await response.json()
     renderMiscData()
+    console.log(searchInput.value)
 }
 
 async function renderMiscData() {
@@ -37,3 +38,9 @@ async function renderMiscData() {
     precip.innerText = jsonData.current.precip_in + ' in'
 }
 
+searchBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    city = searchInput.value
+    apiKey = "http://api.weatherapi.com/v1/current.json?key=098e7d365540490a963185024232706&q=" + city + "&aqi=no"
+    renderMiscData()
+})

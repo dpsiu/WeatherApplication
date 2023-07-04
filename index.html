@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="searchBar">
+    <!-- <div class="searchBar">
         <input type="text" placeholder="Search for a city" id="cityInput">
         <img src="./icons/magnify (copy 1).svg" alt="">
+    </div> -->
+    <div class="searchBar">
+        <form action="">
+            <input id="searchInput" placeholder="Search for a city">
+            <button type="submit" id="searchBtn">Search</button>
+        </form>
     </div>
     <div id="weatherMainInfo">
         <div class="weatherInfoLeft">
@@ -48,7 +54,6 @@
             </div>
         </div>
     </div>
-    <button id="searchBtn" onclick="renderData()">Test</button>
     <!-- <p id="cityTemperature"></p> -->
 
     <script src="script.js"></script>

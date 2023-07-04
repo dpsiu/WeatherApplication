@@ -22,19 +22,18 @@ body{
     margin: 2rem;
 }
 
-.searchBar img{
+/* .searchBar img{
     background-color: var(--clr-grey);
     padding: 0px 15px 0px 15px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     height: inherit;
-
-}
+} */
 
 .searchBar input{
     border: none;
     background-color: var(--clr-grey);
-    padding: 1rem;
+    padding: 12px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     font-size: 1rem;
