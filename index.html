@@ -13,42 +13,42 @@
     </div>
     <div id="weatherMainInfo">
         <div class="weatherInfoLeft">
-            <p class="cityState">Austin, Texas</p>
-            <p id="cityTemperature">90&deg;F</p>
+            <p id="cityState"></p>
+            <p id="cityTemperature"></p>
         </div>
         <div class="weatherInfoRight">
-            <p class="weatherStatus">Test</p>
+            <p id="weatherStatus"></p>
             <img src="./icons/sunny-1.svg" alt="">
         </div>
         <div class="weatherInfoMisc">
             <div class="weatherDetails">
                 <p class="title">Humidity</p>
-                <p class="humidity weatherDetVal">1</p>
+                <p id="humidity" class="weatherDetVal"></p>
             </div>
             <div class="weatherDetails">
                 <p class="title">Wind Dir</p>
-                <p class="windDir weatherDetVal">5</p>
+                <p id="windDir" class="weatherDetVal"></p>
             </div>
             <div class="weatherDetails">
                 <p class="title">Visibility</p>
-                <p class="visibility weatherDetVal">2</p>
+                <p id="visibility" class="weatherDetVal"></p>
             </div>
             <div class="weatherDetails">
-                <p class="title">Wind (MPH)</p>
-                <p class="windMPH weatherDetVal">4</p>
+                <p class="title">Wind</p>
+                <p id="windMPH" class="weatherDetVal"></p>
             </div>
             <div class="weatherDetails">
                 <p class="title">UV</p>
-                <p class="uv weatherDetVal">3</p>
+                <p id="uv" class="weatherDetVal"></p>
             </div>
 
             <div class="weatherDetails">
                 <p class="title">Precipitation</p>
-                <p class="precip weatherDetVal">6</p>
+                <p id="precip" class="weatherDetVal"></p>
             </div>
         </div>
     </div>
-    <button id="searchBtn" onclick="searchCity()">Test</button>
+    <button id="searchBtn" onclick="renderData()">Test</button>
     <!-- <p id="cityTemperature"></p> -->
 
     <script src="script.js"></script>
