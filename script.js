@@ -27,7 +27,14 @@ async function renderData() {
 async function renderMiscData() {
     const response = await fetch(apiKey)
     const jsonData = await response.json()
-    cityState.innerText = jsonData.location.name + ', ' + jsonData.location.region
+
+
+    if (jsonData.location.region == '') {
+        cityState.innerText = jsonData.location.name + ', ' + jsonData.location.country
+    } else {
+        cityState.innerText = jsonData.location.name + ', ' + jsonData.location.region
+    }
+
     cityTemp.innerText = jsonData.current.temp_f + degreeSymbol;
     weatherStat.innerText = jsonData.current.condition.text
     humidity.innerText = jsonData.current.humidity + '%'
@@ -44,3 +51,13 @@ searchBtn.addEventListener('click', (e) => {
     apiKey = "http://api.weatherapi.com/v1/current.json?key=098e7d365540490a963185024232706&q=" + city + "&aqi=no"
     renderMiscData()
 })
+
+
+function checkInvalidInput() {
+    fetch(apiKey)
+    if (response.status === 400) {
+        console.log('error')
+    } else {
+        console.log('nice!')
+    }
+}
