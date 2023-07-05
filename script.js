@@ -27,7 +27,11 @@ async function renderData() {
 async function renderMiscData() {
     const response = await fetch(apiKey)
     const jsonData = await response.json()
-
+    if (response.status === 400) {
+        alert('Location not found. Please try again. \nCheck: \n - Spelling \n - Syntax (City, City State)')
+    } else {
+        console.log('nice!')
+    }
 
     if (jsonData.location.region == '') {
         cityState.innerText = jsonData.location.name + ', ' + jsonData.location.country
